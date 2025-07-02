@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "/abhijit_portfolio/",
             "outputPath": "dist/app",
             "index": "src/index.html",
             "browser": "src/main.ts",

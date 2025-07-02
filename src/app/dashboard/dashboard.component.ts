@@ -86,7 +86,7 @@ export class DashboardComponent {
 
   downloadResume(): void {
     const link = document.createElement('a');
-    link.href = '../../assets/ABHIJIT_KUNDU_resume.pdf';
+    link.href = 'assets/ABHIJIT_KUNDU_resume.pdf';
     link.download = 'Abhijit_Kundu.pdf';
     link.click();
   }
