@@ -1,0 +1,90 @@
+<div class="main-content">
+    <nav class="navbar" [ngClass]="{ hidden: isNavbarHidden }">
+        <div class="navbar-left">
+            <img src="assets/AbhijitLogo__1_-removebg-preview.png" alt="Logo" class="logo" />
+        </div>
+
+        <div class="navbar-center">
+            <ul class="navbar-menu" [ngClass]="{ show: isNavbarVisible }">
+                <li><a href using [ngClass]="{ active: activeSection === 'home' }"
+                        (click)="scrollToSection('home')">Home</a></li>
+                <li><a [ngClass]="{ active: activeSection === 'about' }" (click)="scrollToSection('about')">About</a>
+                </li>
+                <li><a [ngClass]="{ active: activeSection === 'projects' }"
+                        (click)="scrollToSection('projects')">Projects</a></li>
+                <li><a [ngClass]="{ active: activeSection === 'journey' }"
+                        (click)="scrollToSection('journey')">Journey</a></li>
+                <li><a [ngClass]="{ active: activeSection === 'skills' }" (click)="scrollToSection('skills')">Skills</a>
+                </li>
+                <li><a [ngClass]="{ active: activeSection === 'contact' }"
+                        (click)="scrollToSection('contact')">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <button class="hamburger" (click)="toggleNavbar()">☰</button>
+            <ul class="social-icons">
+                <li>
+                    <a href="mailto:kunduabhijit.745@gmail.com" class="social-icon">
+                        <img src="assets/SocialMedia/email.png" alt="Email" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/7980626706" target="_blank" class="social-icon">
+                        <img src="assets/SocialMedia/whatsapp.png" alt="WhatsApp" />
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.linkedin.com/in/abhijit-kundu-268301131" class="social-icon">
+                        <img src="assets/SocialMedia/linkedin.png" alt="LinkedIn" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Abhijit745" class="social-icon">
+                        <img src="assets/SocialMedia/github.png" alt="Github" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="hero-section" id="home">
+        <div class="hero-image">
+            <img src="assets/tech_boy_transparent.png" alt="Abhijit Kundu" />
+        </div>
+
+        <div class="hero-text">
+            <h1>Abhijit Kundu</h1>
+            <p class="subtitle">FULL STACK ANDROID DEVELOPER</p>
+            <p class="description">
+                Building digital experiences that blend logic, creativity, <br />and purpose — driven by curiosity,
+                precision, <br />and a love for solving real-world problems.
+            </p>
+            <button class="download-btn" (click)="downloadResume()">
+                <i class="fas fa-download"></i> Download Resume
+            </button>
+        </div>
+    </main>
+
+    <!-- Image-container Starts -->
+    <div class="image-container" [class.scrolled]="isScrollToTopVisible">
+        <p class="image">
+            <img src="assets/HyGif.gif" alt="Chat" class="imageImg" />
+        </p>
+    </div>
+    <!-- Image-container Ends -->
+
+    <!-- Water Starts -->
+    <div class="scrollToTop" [style.display]="isScrollToTopVisible ? 'block' : 'none'" (click)="scrollToTop()">
+        <div class="water" [style.height.%]="scrollPercentage"></div>
+        <span><i class="bi bi-chevron-up"></i></span>
+    </div>
+    <!-- Water Ends -->
+</div>
+
+<app-who-am-i></app-who-am-i>
+<app-myabout-us id="about"></app-myabout-us>
+<app-myallprojectsdetails id="projects"></app-myallprojectsdetails>
+<app-my-educationand-exprence id="journey"></app-my-educationand-exprence>
+<app-myskillsimages id="skills"></app-myskillsimages>
+<app-mycontactform id="contact"></app-mycontactform>
+<app-footer></app-footer>
