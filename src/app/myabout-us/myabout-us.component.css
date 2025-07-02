@@ -67,12 +67,22 @@
 /* Text Styles */
 .text-container {
     flex: 1 1 400px;
+    /* line-height: 1.2; */
 }
 
 .heading {
     font-size: 3rem;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.2;
+    /* margin-bottom: 40px; */
+    color: #FFFFFF;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.subHeading {
+     font-size: 2rem;
+    font-weight: 200;
+    line-height: 1.5;
     color: #FFFFFF;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -131,7 +141,8 @@
         text-align: center;
     }
 
-    .image-container, .text-container {
+    .image-container,
+    .text-container {
         max-width: 100%;
     }
 
